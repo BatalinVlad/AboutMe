@@ -1,21 +1,19 @@
-import './styles/HomePage/App.scss';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './styles/global.scss'
+
+import Home from './pages/Home.js'
+import About from './pages/About.js'
+
 
 function App() {
   return (
-    <div className="App">
-      <nav className="main-nav-bar">
-        <ul>
-          <li>home (logo)</li>
-          <li>about</li>
-          <li>services</li>
-          <li>contact</li>
-        </ul>
-      </nav>
-      <header className="App-header">
-        <h1> LETS GO !
-        </h1>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/about" component={About} exact />
+      </Switch>
+    </Router>
   );
 }
 
