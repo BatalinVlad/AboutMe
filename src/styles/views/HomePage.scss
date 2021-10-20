@@ -1,6 +1,83 @@
 .home-page {
-  height: 100vh;
+  position: relative;
   width: 100%;
-  background:linear-gradient(to bottom, rgba(0, 0, 0, 0.1),rgba(0,0,0,.8)) ,url("../images/bg.jpg") center no-repeat;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url("../HomePage/bg.jpg") center no-repeat;
   background-size: cover;
+
+  &-header {
+    h1 {
+      text-shadow: 1px 1px 5px #000;
+      font-size: rem(42px);
+      color: white;
+      padding: 20px 0px;
+    }
+
+    p {
+      color: white;
+      font-size: rem(24px);
+    }
+
+    &-getstart {
+      width: 50%;
+    }
+  }
+
+  &-meimg {
+    opacity: 0.7;
+    width: 50%;
+    height: 100%;
+    background: url("../HomePage/hpme.png") center no-repeat;
+    background-size: cover;
+  }
+
+  .get-start-btn {
+    box-shadow: 0px 6px 32px -2px #dba83260;
+    text-shadow: 0px 4px 3px black;
+    background-color: rgba(0, 255, 13, 0.212);
+    font-size: rem(18px);
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0 auto;
+    margin-top: 35px;
+    width: 170px;
+    height: 70px;
+    transition: 0.8s;
+  }
+  .get-start-btn:hover {
+    box-shadow: 0px 6px 32px -2px #dba8329b;
+    background-color: rgba(0, 255, 13, 0.425);
+  }
+}
+
+.sendmebtn {
+  &-container {
+    background: url("../HomePage/messegemebtn.png") center no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+    height: 230px;
+    width: 130px;
+    opacity: 0.6;
+  }
+  &-container:hover {
+    transition: 0.5s;
+    opacity: 1;
+  }
+  p {
+    margin-top: 20px;
+    color: white;
+  }
+  svg {
+    height: 70px;
+    width: 85px;
+    color: #ffffff67;
+    transition: 0.8s;
+  }
+  svg:hover {
+    color: #ffffffca;
+  }
 }

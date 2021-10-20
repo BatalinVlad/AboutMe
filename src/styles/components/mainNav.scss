@@ -1,15 +1,69 @@
 .main-nav {
-  padding: 10px 20px;
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  padding: 0px 5%;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.4)
   );
-  &-links-container {
-      background-color: blue;
-    a {
-      margin: 0px 10px;
-      background-color: beige;
+  &-links {
+    a:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &-link {
+    width: 120px;
+    position: relative;
+    height: 100%;
+    svg {
+      height: 100%;
+      padding-top: 1px;
+      margin-right: 3px;
+    }
+  }
+  &-link::before,
+  &-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ddaa33;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 0.8s;
+  }
+
+  &-link::before {
+    top: 0;
+    transform-origin: left;
+  }
+
+  &-link::after {
+    bottom: 0;
+    transform-origin: right;
+  }
+
+  &-link:hover::before,
+  &-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  &-link:hover {
+    transition: 0.5s;
+    background-color: #f8c14236;
+    color: rgba(255, 255, 255, 0.699);
+  }
+
+  &-logo {
+    width: 100px;
+    padding: 3px;
+    &-image {
+      height: 45px;
+      background: url("../images/navlogonoimg.png") center;
+      background-size: cover;
     }
   }
 }
