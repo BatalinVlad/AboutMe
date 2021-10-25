@@ -1,11 +1,18 @@
 
 import React, { useState } from 'react';
 import MainNavBar from '../cmps/MainNavBar';
-import { BiMessageAltDots } from 'react-icons/bi'
+import SendMailBtn from '../cmps/SendMailBtn';
+import SendMailNow from '../cmps/SendMailNow';
+
 
 
 function Home() {
     const [toggleSendMailBtn, setToggleSendMailBtn] = useState(false);
+
+    function onSetToggleSendMail() {
+        console.log('toggle send mail')
+        setToggleSendMailBtn(!toggleSendMailBtn)
+    }
 
     return (
         <div className="home-page flex column">
@@ -23,13 +30,10 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="sendmebtn-container flex align-center justify-center"
-                onClick={() => setToggleSendMailBtn(!toggleSendMailBtn)}>
-                <div className="sendmebtn flex column align-center">
-                    <p className="uppercase bold">messege me : {toggleSendMailBtn.toString()} </p>
-                    <BiMessageAltDots />
-                </div>
-            </div>
+            {/* <div > */}
+            <SendMailBtn setToggleSendMail={onSetToggleSendMail} />
+            {/* </div> */}
+            {toggleSendMailBtn ? <SendMailNow /> : ''}
         </div>
     );
 }
