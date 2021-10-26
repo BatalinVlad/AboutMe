@@ -1,12 +1,13 @@
 import React from 'react';
 
-function SendMailNow() {
+function SendMailNow({onSetToggleSendMail}) {
     return (
         <>
-            <div className="send-mail-now-exit">
-            </div>
             <div className="send-mail-now container flex column align-center">
-                hey send mail now!
+              <h1 className="text-center">  hey send mail now! </h1>
+                <div className="send-mail-now-exit" onClick={onSetToggleSendMail}>
+                <h1>X</h1>
+                </div>
             </div>
         </>
     )

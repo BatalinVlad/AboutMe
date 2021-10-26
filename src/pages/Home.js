@@ -10,7 +10,6 @@ function Home() {
     const [toggleSendMailBtn, setToggleSendMailBtn] = useState(false);
 
     function onSetToggleSendMail() {
-        console.log('toggle send mail')
         setToggleSendMailBtn(!toggleSendMailBtn)
     }
 
@@ -30,10 +29,8 @@ function Home() {
                     </div>
                 </div>
             </div>
-            {/* <div > */}
             <SendMailBtn setToggleSendMail={onSetToggleSendMail} />
-            {/* </div> */}
-            {toggleSendMailBtn ? <SendMailNow /> : ''}
+            {toggleSendMailBtn ? <SendMailNow onSetToggleSendMail={onSetToggleSendMail} /> : ''}
         </div>
     );
 }
