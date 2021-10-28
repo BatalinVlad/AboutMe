@@ -1,14 +1,17 @@
 .send-mail-now {
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
-  box-shadow: 0px 0px 10px 8px #dba83246;
+  // animation: Slide_Up 1.4s ease;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 0px 10px 8px #000000ad;
   position: absolute;
-  // height: 50%;
   width: 330px;
-  background-color: rgba(0, 0, 0, 0.85);
+  height: 400px;
+  background: url("../images/sendmail.jpg") rgba(0, 0, 0, 0.5) center no-repeat;
+  background-size: cover;
   right: 10px;
-  bottom: 0;
+  bottom: 0px;
   padding-bottom: 10px;
+
   h1 {
     margin-top: 30px;
     font-size: rem(28px);
@@ -16,24 +19,42 @@
   }
 
   &-exit {
-    svg{
+    border-top-left-radius: 20px;
+    height: 25px;
+    svg {
       font-size: 20px;
-    }
-    svg:hover{
-      background-color: rgba(255, 255, 255, 0.212);
-      transition: 0.3s;
+      margin: 3px;
     }
     color: white;
     position: absolute;
-    left: 10px;
-    top: 8px;
+    left: 4px;
+    top: 4px;
     cursor: pointer;
   }
-
-  .contact-form{
+  &-exit:hover {
+    background-color: rgba(255, 255, 255, 0.212);
+    transition: 0.3s;
+  }
+  .contact-form {
     color: white;
     display: flex;
     flex-direction: column;
     padding-top: 15px;
   }
 }
+
+// @keyframes myAnimation{
+//   0%{
+//     opacity: 1;
+//     transform: rotateX(90deg);
+//   }
+//   50%{
+//     opacity: 0.5;
+//     transform: rotateX(0deg);
+//   }
+//   100%{
+//     display: none;
+//     opacity: 0;
+//     transform: rotateX(90deg);
+//   }
+// }

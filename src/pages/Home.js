@@ -1,9 +1,10 @@
 
 import React, { useState } from 'react';
+
 import MainNavBar from '../cmps/MainNavBar';
 import SendMailBtn from '../cmps/SendMailBtn';
 import SendMailNow from '../cmps/SendMailNow';
-
+import Test from '../cmps/Test'
 
 
 function Home() {
@@ -30,7 +31,20 @@ function Home() {
                 </div>
             </div>
             <SendMailBtn setToggleSendMail={onSetToggleSendMail} />
-            {toggleSendMailBtn ? <SendMailNow onSetToggleSendMail={onSetToggleSendMail} /> : ''}
+
+            {toggleSendMailBtn && (
+                // <CSSTransition
+                //     in={toggleSendMailBtn}
+                //     timeout={300}
+                //     classNames="alert"
+                //     unmountOnExit
+                //     onEnter={() => setToggleSendMailBtn(true)}
+                //     onExited={() => setToggleSendMailBtn(false)}
+                // >
+                    <SendMailNow onSetToggleSendMail={onSetToggleSendMail} />
+                // </CSSTransition>
+            )}
+            <Test />
         </div>
     );
 }

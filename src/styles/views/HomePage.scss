@@ -7,6 +7,7 @@
   background-size: cover;
 
   &-header {
+    animation: Slide_Up  1.2s ease;
     h1 , p {
       text-shadow: 1px 1px 5px #000;
       font-size: rem(42px);
@@ -70,3 +71,14 @@
     color: #ffffffca;
   }
 }
+
+
+// @keyframes Slide_Up {
+//   0% {
+//     transform: translateY(250px);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+
