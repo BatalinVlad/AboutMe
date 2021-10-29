@@ -1,19 +1,10 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import MainNavBar from '../cmps/MainNavBar';
-import SendMailBtn from '../cmps/SendMailBtn';
-import SendMailNow from '../cmps/SendMailNow';
-import Test from '../cmps/Test'
-
+import SendMail from '../cmps/SendMail';
 
 function Home() {
-    const [toggleSendMailBtn, setToggleSendMailBtn] = useState(false);
-
-    function onSetToggleSendMail() {
-        setToggleSendMailBtn(!toggleSendMailBtn)
-    }
-
     return (
         <div className="home-page flex column">
             <MainNavBar />
@@ -30,21 +21,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <SendMailBtn setToggleSendMail={onSetToggleSendMail} />
-
-            {toggleSendMailBtn && (
-                // <CSSTransition
-                //     in={toggleSendMailBtn}
-                //     timeout={300}
-                //     classNames="alert"
-                //     unmountOnExit
-                //     onEnter={() => setToggleSendMailBtn(true)}
-                //     onExited={() => setToggleSendMailBtn(false)}
-                // >
-                    <SendMailNow onSetToggleSendMail={onSetToggleSendMail} />
-                // </CSSTransition>
-            )}
-            <Test />
+            <SendMail />
         </div>
     );
 }

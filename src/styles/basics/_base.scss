@@ -106,46 +106,20 @@ svg{
   cursor: pointer;
 }
 
-
-// .modal-enter {
-//   opacity: 0;
-//   transform: translate(100%, 0);
-// }
-
-// .modal-enter-active {
-//   opacity: 1;
-//   transform: translate(0, 0);
-//   transition: 0.7s ease;
-// }
-
-// .modal-exit {
-//   opacity: 1;
-// }
-
-// .modal-exit-active {
-//   opacity: 0;
-//   transform: translate(100%, 0);
-//   transition: 0.7s ease;
-// }
-
-// .MuiSvgIcon-root {
-//   cursor: pointer;
-// }
-
-// .login-btn {
-//   display: flex;
-//   align-items: center;
-//   cursor: pointer;
-//   transition: 0.2s;
-//   padding: 2px 4px;
-//   text-transform: capitalize;
-
-//   &:hover {
-//     border-radius: 4px;
-//     background-color: rgba(165, 165, 165, 0.829);
-//   }
-
-//   p {
-//     color: white;
-//   }
-// }
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
